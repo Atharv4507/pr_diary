@@ -196,3 +196,19 @@ class _ForgotPasswordState extends State<OtpScreen> {
     );
   }
 }
+
+class MandatoryField extends StatelessWidget {
+  const MandatoryField({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      "*",
+      style: TextStyle(
+        color: AppColors.red,
+        fontSize: 12.sp,
+        fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+}
