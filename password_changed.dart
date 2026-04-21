@@ -16,6 +16,8 @@ class PasswordChanged extends StatefulWidget {
   State<PasswordChanged> createState() => _ForgotPasswordState();
 }
 
+
+
 class _ForgotPasswordState extends State<PasswordChanged> {
   @override
   Widget build(BuildContext context) {
@@ -125,6 +127,19 @@ class _ForgotPasswordState extends State<PasswordChanged> {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class SignIn extends StatelessWidget {
+  const SignIn({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Text("Sign In Screen"),
       ),
     );
   }
