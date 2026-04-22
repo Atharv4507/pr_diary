@@ -15,3 +15,15 @@ BlocConsumer<FcBloc, FcState>(
     return Container();
   },
 )
+
+BlocProvider(
+  create: (context) => SuperBloc(),
+  child: Container(
+    child: SingleChildScrollView(
+      scrolldirection: vertical
+      child: Center(
+        child: Text("Hello World")
+      )
+    )
+  ),
+)
