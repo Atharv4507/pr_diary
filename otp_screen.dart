@@ -202,12 +202,26 @@ class MandatoryField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      "*",
-      style: TextStyle(
-        color: AppColors.red,
-        fontSize: 12.sp,
-        fontWeight: FontWeight.bold,
+    return Center(
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            "*",
+            style: TextStyle(
+              color: AppColors.red,
+              fontSize: Responsive.isTablet(context) ? 7.sp : 12.sp,
+            ),
+          ),
+          FxBox.w4,
+          Text(
+            "Mandatory",
+            style: TextStyle(
+              color: AppColors.subheadingColor,
+              fontSize: Responsive.isTablet(context) ? 7.sp : 12.sp,
+            ),
+          ),
+        ],
       ),
     );
   }
