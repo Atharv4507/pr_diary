@@ -137,10 +137,19 @@ class SignIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text("Sign In Screen"),
-      ),
-    );
+    return BlocListener<HomeBloc, HomeState>(
+      listener: (context, state) {
+        loader.hide();
+      },
+      child: BlocBuilder<HomeBloc, HomeState>(
+        builder: (context, state) {
+          return Scaffold(
+            body: Center(
+              child: Text("Sign In Screen"),
+            ),
+          );
+        },
+      )
+    )
   }
 }
